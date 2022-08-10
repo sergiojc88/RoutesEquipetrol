@@ -9,5 +9,5 @@ class Driver extends Model
 {
     use HasFactory;
     protected $table = 'Driver';
-    protected $fillable = ['NroId', 'Nombre', 'FechaNac'];
+    protected $fillable = ['TipoId', 'NroId', 'Nombre', 'FechaNac'];
 }

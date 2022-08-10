@@ -14,8 +14,9 @@ class DriverController extends Controller
      */
     public function index()
     {
-        $driver = Driver::all();
-        return $driver;
+        $drivers = Driver::all();
+        //return $driver;
+        return response()->json($drivers);
     }
 
     /**
@@ -37,6 +38,7 @@ class DriverController extends Controller
     public function store(Request $request)
     {
         $driver = new Driver();
+        $driver->TipoId = $request->TipoId;
         $driver->NroId = $request->NroId;
         $driver->Nombre = $request->Nombre;
         $driver->FechaNac = $request->FechaNac;
